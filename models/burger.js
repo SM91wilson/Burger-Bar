@@ -18,4 +18,4 @@ const burger = {
     }
 };
 
-modules.exports = burger;
+module.exports = burger;
