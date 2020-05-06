@@ -1,4 +1,4 @@
-<h1>Burger Eats</h1>
+{{!-- <h1>Burger Eats</h1>
 <ul>
   {{#each burgers}}
     <li>
@@ -6,4 +6,38 @@
       <p>Devoured:{{devoured}}</p>
     </li>
   {{/each}}
+</ul> --}}
+
+<h1>Burger Eats</h1>
+
+<h2>Burgers:</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+    {{> burger/burger devoured=false}}
+    {{/unless}}
+  {{/each}}
 </ul>
+
+<h2>Burgers that are devoured</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#if devoured}}
+    {{> burger/burger devoured=true}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a Burger</h2>
+
+<form class="add">
+  <div>
+    <label>Burger Name:</label>
+    <input type="text" id="newBurger" name="burgerName">
+    <input type="submit" value="submit">
+  </div>
+</form>
+
+
