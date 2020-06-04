@@ -9,8 +9,9 @@ $(function(){
             type: 'PUT',
             data: devouredStatus
         }).then(function(){
+            console.log('Devoured')
             location.reload();
-        })
+        });
     });
 
     $('.add').on('submit', function(e){

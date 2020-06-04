@@ -1,0 +1,57 @@
+body {
+    background-color: palegoldenrod;
+}
+
+h1 {
+    background-color: rgb(252, 181, 49);
+    justify-content: center;
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container {
+    display: inline-block;
+    width: auto;
+    background-color: rgb(247, 234, 64);
+    margin-top: 5;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.eaten {
+    float: right;
+}
+
+img {
+    width: 150px;
+    margin: auto;
+    display: inline-block;
+    
+}
+
+.toEat {
+    justify-content: left;
+}
+
+button {
+    border: solid black;
+    border-radius: 12px;
+}
+
+.add {
+    justify-content: center;
+    margin: auto;
+    width: auto;
+}
+
+.addForm {
+        justify-content: center;
+        margin: auto;
+        width: auto;
+}
+
+label {
+    text-align: center;
+}

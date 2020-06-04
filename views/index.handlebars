@@ -1,43 +1,40 @@
-{{!-- <h1>Burger Eats</h1>
-<ul>
-  {{#each burgers}}
-    <li>
-      <p>{{burger_name}}</p>
-      <p>Devoured:{{devoured}}</p>
-    </li>
-  {{/each}}
-</ul> --}}
-
 <h1>Burger Eats</h1>
 
-<h2>Burgers:</h2>
-
-<ul>
-  {{#each burgers}}
+<div class="container toEat">
+  <h2>Burgers:</h2>
+  <ul>
+    {{#each burgers}}
     {{#unless devoured}}
     {{> burger/burger devoured=false}}
     {{/unless}}
-  {{/each}}
-</ul>
+    {{/each}}
+  </ul>
+</div>
 
-<h2>Burgers that are devoured</h2>
+<div class="container">
+  <img src="/assets/4728.png" alt="cartoon burger"/>
+</div>
 
-<ul>
-  {{#each burgers}}
+<div class="container eaten">
+  <h2>Burgers that are devoured:</h2>
+  <ul class='eaten'>
+    {{#each burgers}}
     {{#if devoured}}
     {{> burger/burger devoured=true}}
     {{/if}}
-  {{/each}}
-</ul>
+    {{/each}}
+  </ul>
+</div>
 
-<h2>Add a Burger</h2>
+<h2 class="add d-flex">Add a Burger</h2>
+
 
 <form class="add">
-  <div>
-    <label>Burger Name:</label>
+  <div class='d-flex addForm'>
+    <h2>
+      <label >Burger Name:</label>
+    </h2>
     <input type="text" id="newBurger" name="burgerName">
-    <input type="submit" value="submit">
+    <input type="submit" value="submit" class="btn-danger">
   </div>
 </form>
-
-
